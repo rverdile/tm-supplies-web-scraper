@@ -1,2 +1,3 @@
 # service account credentials file
 google_api_config/google_secret.json
+my_sql/python_mysql_tutorial/config.ini
