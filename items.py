@@ -147,7 +147,7 @@ class DigiKeyItem(Item):
 
         return des, detailed_des
 
-    def get_data(self):
+    def get_data_as_dict(self):
 
         part_name = self.get_part_name()
 
@@ -164,3 +164,15 @@ class DigiKeyItem(Item):
         self.data['Detailed Description'] = descriptions[1]
 
         return self.data
+
+    def get_data_as_tuple(self):
+
+        part_name = self.get_part_name()
+
+        stock = self.get_stock()
+
+        price = self.get_price()
+
+        descriptions = self.get_descriptions()
+
+        return (part_name,stock,price,descriptions[0],descriptions[1])
